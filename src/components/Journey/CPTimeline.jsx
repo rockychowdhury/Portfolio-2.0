@@ -14,7 +14,7 @@ const CPTimeline = () => {
             </div>
             <div className='p-4 pt-2  w-fit'>
                 <h3 className='text-3xl font-semibold'>Competitive Programming</h3>
-                <p className='text-sm font-medium font-inter text-marble bg-action w-fit px-4 rounded-full'>Jun 2024 - July 2024</p>
+                <p className='text-sm font-medium font-inter text-marble bg-action w-fit px-4 rounded-full'>September 2023 - January 2024</p>
                 <p className='font-semibold text-lg my-2'>Sharpened problem-solving skills and achieved significant milestones in coding contests.</p>
                 <ul className='list-disc ps-5 space-y-2 text-lg'>
                     <li>Solved over 500 problems across platforms, sharpening problem-solving skills.</li>

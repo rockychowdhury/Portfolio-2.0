@@ -15,7 +15,7 @@ const FoundationTimeline = () => {
             </div>
             <div className='p-4 pt-2  w-fit'>
                 <h3 className='text-3xl font-semibold'>Foundation Phase</h3>
-                <p className='text-sm font-medium font-inter text-marble bg-action w-fit px-4 rounded-full'>Jun 2024 - July 2024</p>
+                <p className='text-sm font-medium font-inter text-marble bg-action w-fit px-4 rounded-full'>April 2023 - September 2023</p>
                 <p className='font-semibold text-lg my-2'>Built a strong coding foundation and learned to solve problems logically.</p>
                 <div className='flex flex-wrap gap-2'>
                     {

@@ -14,7 +14,7 @@ const BackendTimeline = () => {
             </div>
             <div className='p-4 pt-2 w-fit'>
                 <h3 className='text-3xl font-semibold'>Backend Development</h3>
-                <p className='text-sm font-medium font-inter text-marble bg-action w-fit px-4 rounded-full'>Jun 2024 - July 2024</p>
+                <p className='text-sm font-medium font-inter text-marble bg-action w-fit px-4 rounded-full'>January 2024 - June 2024</p>
                 <p className='font-semibold text-lg my-2'>Focused on building secure, scalable systems and tested real-world functionalities.</p>
                 <div className='flex flex-wrap gap-2'>
                     {
