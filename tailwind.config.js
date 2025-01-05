@@ -39,8 +39,10 @@ export default {
         
       },
       boxShadow: {
-        custom: ' rgba(33, 35, 38, 0.1) 0px 10px 10px -10px',
+        custom: 'rgba(33, 35, 38, 0.1) 0px -10px 10px -10px',
+        'top-md': '0px -4px 6px -1px rgba(0, 0, 0, 0.01), 0px -2px 4px -2px rgba(0, 0, 0, 0.1)',
       },
+      
       spacing: {
         128: '32rem', // Custom large spacing
         144: '36rem', // Extra-large spacing

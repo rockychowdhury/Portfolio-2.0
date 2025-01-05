@@ -9,7 +9,7 @@ const HeroSection = () => {
             </figure>
             <h2 className='font-bold text-4xl'>A Full-Stack Developer</h2>
             <h4>I'm always eager to expand my skill set and stay current with the latest technology</h4>
-            <h1 className='bg-action px-4 rounded-full text-marble'>&quot;- With Small Steps, I Will Go Very Far_&quot;</h1>
+            <h1 className='bg-action px-4 rounded-full text-marble font-logo'>&quot;- With Small Steps, I Will Go Very Far_&quot;</h1>
             <SocialLinks/>
         </div>
     );

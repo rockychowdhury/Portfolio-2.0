@@ -1,7 +1,7 @@
 
 const Stack = ({icon}) => {
     return (
-        <div className="keen-slider__slide bg-marble border border-action flex flex-col gap-3 items-center justify-center p-5 rounded-4xl rounded-tr-none rounded-bl-none">
+        <div className="keen-slider__slide bg-marble border border-action flex flex-col gap-3 items-center justify-center p-5 rounded-4xl">
             <img className="w-20" src={icon} alt="" />
             <h3>name</h3>
         </div>
