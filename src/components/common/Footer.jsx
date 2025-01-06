@@ -4,7 +4,7 @@ import { MailCheck } from 'lucide-react';
 
 const Footer = () => {
     return (
-        <footer className="bg-gray-900 text-white py-6">
+        <footer className="bg-marble  py-6">
             <div className="container mx-auto text-center">
                 {/* Social Links */}
                 <div className="flex justify-center items-center space-x-6 mb-4">

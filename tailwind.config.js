@@ -10,12 +10,13 @@ export default {
         marble: '#F2F8FC',
         action: '#896442',
         action_dark:'#70503E',
-        primary: '#eeedec',
-        secondary: '#fafafa',
+        primary: '#6A8FC2',
+        secondary: '#D7DADC',
         accent:'',
         natural: '#333333',
         highlight:'#70503E',
         newBg: '#f3f6f8',
+
       },
       fontFamily: {
         inter: ['Inter', 'sans-serif'],

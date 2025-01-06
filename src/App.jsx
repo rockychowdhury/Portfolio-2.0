@@ -10,6 +10,8 @@ import Projects from './components/Projects/Projects';
 import Education from './components/Education/Education';
 import Contact from './components/Contact/Contact';
 import Footer from './components/common/Footer';
+import SecondaryBg from './components/common/SecondaryBg';
+import PrimaryBG from './components/common/PrimaryBG';
 function App() {
   return (
     <section className='font-poppins text-natural'>
@@ -45,11 +47,15 @@ function App() {
         <div>
           <Projects></Projects>
         </div>
-        <div>
-          <Education></Education>
+        <div >
+          <InvertedSecondaryBg>
+            <div>
+              <Education></Education>
+            </div>
+          </InvertedSecondaryBg>
         </div>
-        <div>
-          <Contact></Contact>
+        <div className=''>
+          <PrimaryBG><Contact></Contact></PrimaryBG>
         </div>
       </main>
 
