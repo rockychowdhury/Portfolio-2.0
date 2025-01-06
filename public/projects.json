@@ -1,0 +1,80 @@
+[
+    {
+        "name": "FurEver Home",
+        "type": "Pet Adoption Platform",
+        "stacks": [
+            "Django",
+            "React",
+            "JWT",
+            "DRF",
+            "Tailwind",
+            "Postgres"
+        ],
+        "live": "https://fur-ever-home.vercel.app/",
+        "github": "https://github.com/rockychowdhury/Pet-Adoption-Platform-Django-React",
+        "preview": "https://i.ibb.co.com/JRj7pKd/Screenshot-from-2025-01-06-20-08-55.png"
+    },
+    {
+        "name": "AltRec",
+        "type": "Product Recommendation Platform",
+        "stacks": [
+            "Node.js",
+            "Express.Js",
+            "Firebase OAuth",
+            "React",
+            "MongoDB",
+            "JWT",
+            "Tailwind"
+        ],
+        "live": "https://altrec-68fe1.web.app/",
+        "github": "https://github.com/rockychowdhury/Alternative-Product-Recommendation-Platform",
+        "preview": "https://i.ibb.co.com/ngS8G5z/Screenshot-from-2025-01-06-20-50-26.png"
+    },
+    {
+        "name": "Book Shelf",
+        "type": "Library Management",
+        "stacks": [
+            "Django",
+            "MVT",
+            "Bootstrap",
+            "SQLite",
+            "HTML",
+            "CSS",
+            "JS"
+        ],
+        "live": "https://bookshelf-dnaw.onrender.com/",
+        "github": "https://github.com/rockychowdhury/BookShelf",
+        "preview": "https://i.ibb.co.com/8sgHz9F/Screenshot-from-2025-01-06-20-12-02.png"
+    },
+    {
+        "name": "MomentScape",
+        "type": "Social Media Platform",
+        "stacks": [
+            "Django",
+            "React",
+            "Postgres",
+            "JWT",
+            "DRF",
+            "Tailwind",
+            "DaisyUi"
+        ],
+        "live": "https://moment-scape.vercel.app/",
+        "github": "https://github.com/rockychowdhury/MomentScape_REST_API",
+        "preview": "https://i.ibb.co.com/pR5fx72/Moment-Scape.png"
+    },
+    {
+        "name": "EquiSports",
+        "type": "Sports Equipments Shop",
+        "stacks": [
+            "Node.js",
+            "Express.Js",
+            "Firebase OAuth",
+            "React",
+            "MongoDB",
+            "Tailwind"
+        ],
+        "live": "https://equsports.web.app/",
+        "github": "https://github.com/rockychowdhury/Equipment-Shop",
+        "preview": "https://i.ibb.co.com/Z8sGxVS/Screenshot-from-2025-01-06-21-00-45.png"
+    }
+]
