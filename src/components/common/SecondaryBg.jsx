@@ -5,7 +5,7 @@ const SecondaryBg = ({ children }) => {
 
     return (
         <div  className='h-fit pb-2'  style={{ backgroundImage: `url(${bg1})` }}>
-            <div className=' bg-center rounded-b-[100px] border-b shadow-md ' style={{ backgroundImage: `url(${bg})` }}>
+            <div className=' bg-center rounded-b-[100px] border-b  ' style={{ backgroundImage: `url(${bg})` }}>
                 {children}
             </div>
         </div>

@@ -4,7 +4,7 @@ const PrimaryBG = ({ children }) => {
 
     return (
         <div className='h-fit'  style={{ backgroundImage: `url(${bg1})` }}>
-            <div className='border-b  bg-center ' style={{ backgroundImage: `url(${bg})` }}>
+            <div className=' bg-center ' style={{ backgroundImage: `url(${bg})` }}>
                 {children}
             </div>
         </div>
