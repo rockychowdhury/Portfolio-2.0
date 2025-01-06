@@ -12,7 +12,7 @@ const Projects = () => {
     }, []);
     return (
         <PrimaryBG>
-            <div className='container py-20'>
+            <div className='container py-20 space-y-4'>
                 <div >
                     <h1 className='text-4xl font-semibold'>Projects</h1>
                 </div>
