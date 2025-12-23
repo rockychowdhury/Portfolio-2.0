@@ -3,20 +3,77 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+html, body, #root {
+  background-color: #0F172A;
+  color: #F1F5F9;
+}
+
+/* Dark theme base */
+@layer base {
+  body {
+    @apply bg-darkBg text-darkText;
+  }
+}
+
+/* Texture overlay for dark backgrounds */
+.texture-overlay {
+  position: relative;
+  background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%);
+}
+
+.texture-overlay::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: 
+    radial-gradient(circle at 20% 50%, rgba(0, 217, 255, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(6, 182, 212, 0.08) 0%, transparent 50%);
+  pointer-events: none;
+}
 
 .timeline-card {
-  border-left: 4px solid #3b82f6; /* Highlight for each section */
+  border-left: 4px solid #00D9FF;
+  background-color: rgba(30, 41, 59, 0.5);
+  backdrop-filter: blur(10px);
+}
+
+.timeline-card:hover {
+  background-color: rgba(30, 41, 59, 0.8);
+  box-shadow: 0 0 20px rgba(0, 217, 255, 0.2);
 }
 
 .icon-wrapper {
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 15px rgba(0, 217, 255, 0.15);
 }
 
 .icon {
-  transition: transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out, filter 0.2s ease-in-out;
 }
 
 .icon:hover {
   transform: scale(1.2);
+  filter: drop-shadow(0 0 8px rgba(0, 217, 255, 0.4));
+}
+
+/* Glow effect for interactive elements */
+.glow-text {
+  text-shadow: 0 0 10px rgba(0, 217, 255, 0.5);
+}
+
+/* Card glassmorphism effect */
+.card-glass {
+  background: rgba(30, 41, 59, 0.5);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(0, 217, 255, 0.1);
+}
+
+.card-glass:hover {
+  border-color: rgba(0, 217, 255, 0.3);
+  box-shadow: 0 0 20px rgba(0, 217, 255, 0.2);
 }

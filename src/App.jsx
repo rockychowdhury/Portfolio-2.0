@@ -14,10 +14,11 @@ import SecondaryBg from './components/common/SecondaryBg';
 import PrimaryBG from './components/common/PrimaryBG';
 function App() {
   return (
-    <section className='font-poppins text-natural'>
-      <div className='h-fit' style={{ backgroundImage: `url(${bg1})` }}>
-        <div className='border-b  bg-center rounded-b-[100px] ' style={{ backgroundImage: `url(${bg})` }}>
-          <header className=''>
+    <section className='font-poppins text-darkText bg-darkBg'>
+      <div className='h-fit bg-dark-gradient'>
+        <div className='border-b border-darkCard rounded-b-[100px] backdrop-blur-sm'>
+          <div className='absolute inset-0 bg-glow-gradient pointer-events-none'></div>
+          <header className='relative z-10'>
             <section className='container '>
               <Navbar></Navbar>
               <HeroSection>

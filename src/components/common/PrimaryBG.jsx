@@ -1,10 +1,8 @@
-import bg from '../../assets/bg1.jpg'
-import bg1 from '../../assets/bg2.jpg'
 const PrimaryBG = ({ children }) => {
-
     return (
-        <div className='h-fit'  style={{ backgroundImage: `url(${bg1})` }}>
-            <div className=' bg-center ' style={{ backgroundImage: `url(${bg})` }}>
+        <div className='h-fit bg-dark-gradient relative overflow-hidden'>
+            <div className='absolute inset-0 bg-glow-gradient pointer-events-none'></div>
+            <div className='relative z-10'>
                 {children}
             </div>
         </div>

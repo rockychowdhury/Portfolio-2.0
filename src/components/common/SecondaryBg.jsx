@@ -1,11 +1,8 @@
-import bg from '../../assets/bg2.jpg'
-import bg1 from '../../assets/bg1.jpg'
-
 const SecondaryBg = ({ children }) => {
-
     return (
-        <div  className='h-fit pb-2'  style={{ backgroundImage: `url(${bg1})` }}>
-            <div className=' bg-center rounded-b-[100px] border-b  ' style={{ backgroundImage: `url(${bg})` }}>
+        <div className='h-fit pb-2 bg-dark-gradient-alt relative overflow-hidden'>
+            <div className='absolute inset-0 bg-glow-gradient pointer-events-none'></div>
+            <div className='relative z-10 bg-center rounded-b-[100px] border-b border-darkCard'>
                 {children}
             </div>
         </div>
