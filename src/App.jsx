@@ -2,16 +2,14 @@ import Navbar from './components/common/Navbar';
 import HeroSection from './components/HeroSection/HeroSection';
 import Stacks from './components/Stacks/Stacks';
 import Journey from './components/Journey/Journey';
-import bg from '../src/assets/bg1.jpg'
-import bg1 from '../src/assets/bg2.jpg'
 import InvertedSecondaryBg from './components/common/InvertedSecondaryBg';
 import Services from './components/Services/Services';
 import Projects from './components/Projects/Projects';
 import Education from './components/Education/Education';
 import Contact from './components/Contact/Contact';
 import Footer from './components/common/Footer';
-import SecondaryBg from './components/common/SecondaryBg';
 import PrimaryBG from './components/common/PrimaryBG';
+import Statistics from './components/Statistics/Statistics';
 function App() {
   return (
     <section className='font-poppins text-darkText bg-darkBg'>
@@ -39,8 +37,11 @@ function App() {
           <Journey></Journey>
         </div>
         <div>
+          <Statistics></Statistics>
+        </div>
+        <div>
           <InvertedSecondaryBg>
-            <div className='h-96 container py-10'>
+            <div className='h-fit container py-20'>
               <Services></Services>
             </div>
           </InvertedSecondaryBg>
@@ -59,10 +60,6 @@ function App() {
           <PrimaryBG><Contact></Contact></PrimaryBG>
         </div>
       </main>
-
-
-
-
 
       <footer>
         <Footer></Footer>
