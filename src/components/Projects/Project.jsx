@@ -16,7 +16,7 @@ const Project = ({ project }) => {
             <div className="flex flex-wrap gap-4">
                 {
                     project?.stacks.map((stack, idx) =>
-                        <p className="bg-action text-marble font-medium text-sm px-2 rounded-full">{stack}</p>
+                        <p key={idx} className="bg-action text-marble font-medium text-sm px-2 rounded-full">{stack}</p>
                     )
                 }
             </div>
