@@ -10,6 +10,8 @@ import Contact from './components/Contact/Contact';
 import Footer from './components/common/Footer';
 import PrimaryBG from './components/common/PrimaryBG';
 import Statistics from './components/Statistics/Statistics';
+import CodingActivity from './components/CodingActivity/CodingActivity';
+
 function App() {
   return (
     <section className='font-poppins text-darkText bg-darkBg'>
@@ -17,27 +19,26 @@ function App() {
         <div className='border-b border-darkCard rounded-b-[100px] backdrop-blur-sm'>
           <div className='absolute inset-0 bg-glow-gradient pointer-events-none'></div>
           <header className='relative z-10'>
-            <section className='container '>
+            <section className='container'>
               <Navbar></Navbar>
-              <HeroSection>
-              </HeroSection>
+              <HeroSection></HeroSection>
             </section>
           </header>
         </div>
       </div>
 
-
-
-
       <main className='relative z-[10]'>
         <div>
           <Stacks></Stacks>
         </div>
-        <div >
+        <div>
           <Journey></Journey>
         </div>
         <div>
           <Statistics></Statistics>
+        </div>
+        <div>
+          <CodingActivity></CodingActivity>
         </div>
         <div>
           <InvertedSecondaryBg>
@@ -49,7 +50,7 @@ function App() {
         <div>
           <Projects></Projects>
         </div>
-        <div >
+        <div>
           <InvertedSecondaryBg>
             <div>
               <Education></Education>

@@ -1,123 +1,122 @@
-# Modern Developer Portfolio
+# Modern Developer Portfolio — Rocky Chowdhury
 
 ## Overview
-A modern, professional developer portfolio website for Rocky Chowdhury with dark theme, scroll animations, glassmorphism effects, and comprehensive feature set for showcasing full-stack development expertise.
+A modern, professional developer portfolio with dark theme, real-time API integrations, scroll animations, and a comprehensive activity dashboard. Built with React, Vite, and Tailwind CSS.
 
-## Key Features
-✅ **Dark Theme**: Professional navy & charcoal backgrounds with cyan accents
-✅ **Scroll Animations**: Smooth scroll-triggered animations on all sections using Framer Motion + Intersection Observer
-✅ **Statistics Section**: "By The Numbers" showcasing 50+ projects, 3+ years experience, 15+ technologies, 100+ clients
-✅ **Glassmorphism Design**: Modern frosted glass cards with backdrop blur effects
-✅ **Responsive Grid**: Auto-responsive layouts for projects, services, and education
-✅ **Interactive Elements**: Hover animations, rotating icons, bouncing elements
-✅ **Full Stack Section**: Journey timeline showing progression from foundation to full-stack expertise
-✅ **Services Section**: Full Stack, Frontend, and Backend development services with animated icons
-✅ **Projects Showcase**: Featured projects with tech stack badges and live/GitHub links
-✅ **Contact & Call-to-Action**: Multiple contact points and CTAs throughout
+## Live API Integrations
+
+### Coding Activity Dashboard (`src/components/CodingActivity/`)
+Fetches real-time data from multiple platforms via `src/services/codingAPIs.js`:
+
+| Platform | API Endpoint | Data Shown |
+|----------|-------------|-----------|
+| **GitHub** | `api.github.com/users/rockychowdhury` | Repos, Stars, Followers, Languages, Commits |
+| **Codeforces** | `codeforces.com/api/user.*` | Rating, Rank, Problems Solved, Tag Analysis, Rating History |
+| **LeetCode** | `leetcode-stats-api.herokuapp.com/Rocky20809` | Easy/Medium/Hard solved, Ranking, Acceptance Rate |
+| **WakaTime** | `wakatime.com/api/v1/users/current/stats` | Coding hours, Languages, Projects (requires API key) |
+
+### Profile Identifiers
+- **GitHub**: `rockychowdhury`
+- **Codeforces**: `__Cipher__` (Rating: 990, Max: 1213)
+- **LeetCode**: `Rocky20809` (106 problems solved)
+- **CodeChef**: `rocky20809`
+
+## Environment Variables
+
+| Variable | Purpose | Required |
+|----------|---------|---------|
+| `VITE_WAKATIME_API_KEY` | WakaTime API key for coding stats | Optional |
+| `VITE_WAKATIME_USERNAME` | WakaTime username (default: Rocky20809) | Optional |
+
+To set up WakaTime:
+1. Get your API key from https://wakatime.com/settings/api-key
+2. Add `VITE_WAKATIME_API_KEY=your_key` to `.env`
 
 ## Tech Stack
-- **Frontend**: React 18 with Vite
+- **Frontend**: React 18 with Vite 6
 - **Styling**: Tailwind CSS + DaisyUI
 - **Animations**: Framer Motion + React Intersection Observer
+- **Charts**: Recharts (for rating history, language distribution, donut charts)
 - **Icons**: Lucide React
-- **Slider**: Keen Slider (for tech stack carousel)
-- **Toasts**: React Toastify (for user feedback)
+- **Slider**: Keen Slider (tech stack carousel)
+- **Notifications**: React Toastify
 
 ## Project Structure
 ```
 src/
+├── services/
+│   └── codingAPIs.js         # All external API fetch functions
+├── hooks/
+│   └── useCodingStats.js     # Custom hook for parallel API fetching
 ├── components/
-│   ├── common/               # Shared components
-│   │   ├── ScrollAnimationWrapper.jsx  # Reusable scroll animation component
+│   ├── CodingActivity/       # NEW: Full activity dashboard
+│   │   ├── CodingActivity.jsx        # Main section with tabs
+│   │   ├── PlatformCards.jsx         # Platform summary cards row
+│   │   ├── LeetCodeSection.jsx       # LeetCode stats + donut chart
+│   │   ├── CodeforcesSection.jsx     # CF stats + rating line chart
+│   │   ├── GithubSection.jsx         # GitHub stats + language bar chart
+│   │   ├── WakatimeSection.jsx       # WakaTime stats or setup prompt
+│   │   ├── ActivityCalendar.jsx      # Heatmap calendar component
+│   │   └── LoadingCard.jsx           # Skeleton loading cards
+│   ├── common/
+│   │   ├── ScrollAnimationWrapper.jsx  # Reusable scroll animation wrapper
 │   │   ├── Navbar.jsx
 │   │   ├── Footer.jsx
 │   │   ├── PrimaryBG.jsx
 │   │   ├── SecondaryBg.jsx
 │   │   └── InvertedSecondaryBg.jsx
-│   ├── HeroSection/          # Hero with animated profile
-│   ├── Projects/             # Projects grid with scroll animations
-│   ├── Services/             # Service cards with hover animations
-│   ├── Stacks/               # Tech stack carousel
-│   ├── Journey/              # Experience timeline
-│   ├── Statistics/           # "By The Numbers" section (NEW)
-│   ├── Education/            # Education section
-│   ├── Contact/              # Contact form
-│   └── hooks/
-│       └── useIcons.jsx      # Custom hook for tech icons
-├── assets/                   # Images and static files
-├── App.jsx
-├── index.css
-└── main.jsx
+│   ├── HeroSection/          # Animated hero with profile
+│   ├── Stacks/               # Categorized tech skills grid
+│   │   ├── Stacks.jsx        # Main section
+│   │   ├── SkillCard.jsx     # Individual skill card with proficiency bar
+│   │   └── SkillsData.js     # Skills organized by category
+│   ├── Journey/              # Timeline-based experience
+│   ├── Statistics/           # By-the-numbers metrics
+│   ├── Services/             # Service offerings
+│   ├── Projects/             # Featured projects
+│   ├── Education/            # Academic background
+│   └── Contact/              # CTA with email/LinkedIn buttons
 ```
 
-## Color Palette
-- **Primary Dark**: #0F172A (darkBg) - Main background
-- **Secondary Dark**: #1E293B (darkCard) - Card backgrounds
-- **Text**: #F1F5F9 (darkText) - Primary text
-- **Accent**: #00D9FF (cyan) - Interactive elements
-- **Highlight**: #0DB8EC - Brighter accent for CTAs
-- **Gold Accent**: #FBBF24 - Alternative warm accent
+## Design System
 
-## Scroll Animation Features
-### ScrollAnimationWrapper Component
-A reusable wrapper that triggers animations on scroll with multiple direction options:
-- `direction="up"`: Slide up with fade-in
-- `direction="down"`: Slide down with fade-in
-- `direction="left"`: Slide left with fade-in
-- `direction="right"`: Slide right with fade-in
-- `direction="scale"`: Scale up with fade-in
+### Colors
+- `darkBg`: `#0F172A` — Main background
+- `darkCard`: `#1E293B` — Card backgrounds
+- `darkText`: `#F1F5F9` — Primary text
+- `accent`: `#00D9FF` — Cyan accents, interactive elements
+- `highlight`: `#0DB8EC` — Brighter accent variant
 
-### Implemented Animations
-1. **Hero Section**: Staggered animations with bouncing name badge
-2. **Projects**: Cascading card animations on scroll
-3. **Services**: Rotating icons with card slide-up animations
-4. **Statistics**: Counter animations with rotating icons
-5. **Stack Items**: Individual slide animations
-6. **All Sections**: Smooth fade-in on scroll
+### Key CSS Classes
+- `.card-glass`: Glassmorphic card with backdrop blur and glow border
+- `.shadow-glow`: Cyan glow effect (0 0 20px rgba(0, 217, 255, 0.3))
+- `.animate-shimmer`: Loading skeleton shimmer animation
+- `bg-dark-gradient`: Primary dark diagonal gradient
+- `bg-glow-gradient`: Radial glow overlay
+
+### Section Layout (top → bottom)
+1. Hero (animated, dark gradient)
+2. Tech Stacks (categorized grid with proficiency bars)
+3. Journey (experience timeline)
+4. Statistics (metrics cards)
+5. **Coding Activity** (API dashboard: Codeforces, LeetCode, GitHub, WakaTime)
+6. Services (service offering cards)
+7. Featured Projects
+8. Education
+9. Contact CTA
+10. Footer
 
 ## Development
 ```bash
-npm install          # Install dependencies
-npm run dev          # Start dev server (port 5000)
-npm run build        # Build for production
+npm install          # Install all dependencies
+npm run dev          # Dev server on port 5000 (host: 0.0.0.0)
+npm run build        # Production build → dist/
 npm run preview      # Preview production build
-npm run lint         # Run ESLint
 ```
 
 ## Deployment
-- **Type**: Static site deployment
+- **Type**: Static site
 - **Build**: `npm run build`
 - **Output**: `dist/` directory
-- **Server Config**: Vite configured for all hosts with port 5000
-
-## Key CSS Classes
-- `.card-glass`: Glassmorphic cards with glow
-- `.texture-overlay`: Background with gradients
-- `.glow-text`: Text with cyan glow shadow
-- `shadow-glow`: Cyan glow effect
-- `bg-dark-gradient`: Primary dark gradient
-- `bg-dark-gradient-alt`: Alternative dark gradient
-- `bg-glow-gradient`: Radial glow overlay
-
-## Recent Enhancements (Session 2)
-- Created ScrollAnimationWrapper component for reusable scroll animations
-- Added Statistics/Metrics section showing key achievements
-- Integrated Framer Motion scroll animations across all major sections
-- Updated Services section with animated icons and cards
-- Enhanced HeroSection with staggered animations and interactive elements
-- Added react-intersection-observer for efficient scroll detection
-- Improved accessibility with semantic HTML and ARIA labels
-- Updated color consistency across all components
-
-## Browser Support
-- Chrome/Edge: Latest 2 versions
-- Firefox: Latest 2 versions
-- Safari: Latest 2 versions
-- Mobile browsers: iOS Safari, Chrome Mobile
-
-## Performance Optimizations
-- Lazy loading of images
-- Code splitting with Vite
-- Smooth scroll behavior
-- Optimized animations with GPU acceleration
-- Efficient re-renders with React hooks
+- **Port**: 5000 (configured in vite.config.js)
+- **Hosts**: All hosts allowed (required for Replit proxy)

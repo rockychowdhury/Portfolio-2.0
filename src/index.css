@@ -66,6 +66,16 @@ html, body, #root {
   text-shadow: 0 0 10px rgba(0, 217, 255, 0.5);
 }
 
+/* Shimmer animation for loading cards */
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+.animate-shimmer {
+  animation: shimmer 1.8s infinite;
+}
+
 /* Card glassmorphism effect */
 .card-glass {
   background: rgba(30, 41, 59, 0.5);
